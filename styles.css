@@ -16,12 +16,20 @@ MAIN NAVIGATION ON EVERY PAGE
 
 .main-nav {
     background-color: #222;
+    display:flex;
+}
+
+@media (max-width: 800px) {
+    .main.nav {
+    flex-direction: column;
+    }
 }
 
 .main-nav a {
     color: white;
     padding: 10px 20px;
     text-decoration: none;
+    
 }
 
 .main-nav a:hover {
@@ -35,14 +43,28 @@ MAIN HEADER ON EVERY PAGE
 
 .main-header {
     background-color: green;
+    background-image: url(images/gallery-08.jpg);
+    background-size:cover;
+
     height: 300px;
     margin-bottom: 30px;
 }
+@media (min-width:800px) {
+    .main-header {
+        background-color: blue;
+        background-image: url(images/fghj.jpg)
 
-.main-title {
+    }
+}
+
+
+
+
+.nav-title {
     font-size: 30px;
     color: white;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    flex: 1;
 }
 
 /* 
@@ -51,9 +73,11 @@ IMAGE PANELS ON HOME PAGE
 */
 
 .panels-container {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    display:flex;
 }
 
 .panel {
@@ -63,10 +87,11 @@ IMAGE PANELS ON HOME PAGE
     overflow: hidden;
     box-shadow: 1px 3px 3px rgba(0,0,0,0.2);
     margin: 5px;
+    flex:1;
 }
 
 .panel img {
-    width: 200px;
+    width: 100%;
 }
 
 .panel span {
@@ -84,7 +109,8 @@ MAIN CONTENT AREA ON ALL PAGES
 */
 
 .main-content {
-    width: 800px;
+    width: 100%;
+    max-width:800px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
